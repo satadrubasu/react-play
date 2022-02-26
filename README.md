@@ -65,12 +65,12 @@ ReactDom.render(<Greeting/>,document.getElementById('root'))
   - children keyword
   - enabiling javascript in JSX with {}
 
-  - Simple List ( Array of Books )
+  - Simple List ( Array of Books ) map() to loop through book list
 
-
-
-
-
+  - Setting up an Event : attribute , eventHandler 
+     note inline avoids the running of handler on render of page
+  - import/exports and managing files
+  - free hosting
 
 ## Getting Started with Create React App
 
