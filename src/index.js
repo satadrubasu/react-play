@@ -1,5 +1,8 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+
+// CSS = full path
+import './index.css'
 // Component name starts with Caps.
 // always return JSX  (JSX Rules)
 // Always return a single fragment at root level
@@ -30,19 +33,20 @@ function Greeting(){
   return (
       <React.Fragment>
         <div>
-          <h2>Hello from Component</h2>
-          <ul>
-            <li>
-              <a href='https://www.google.com'> Hello Google link</a>
-            </li>
-            <input type='text' name='' id =''/>
-            <button type="button">Click Me!</button>
-          </ul>
+          <Person/>
+          <Message/>
+          <button type="button">Click Me!</button>
         </div>
       </React.Fragment>
 
   )
 }
+
+const Person = () => <h2>Satadru Basu</h2>;
+const Message = () => {
+  return <p> The message component</p>;
+}
+
 
 // How to place the Greeting Component onto index.html.
 // Use ReactDom render --> component,targetElementId
