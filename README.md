@@ -31,11 +31,33 @@ cleanup index.js
   > FAST_REFRESH=false
 
 ### COMPONENT = Capslock naming
-  function Greeting () {} --> Capslock means COMPONENT
-  function greeting () {} --> lowercase means stand function
+  function Greeting () {} --> Capslock means COMPONENT  
+  function greeting () {} --> lowercase means standard function
+ ```
+import React from 'react'
+import ReactDom from 'react-dom'
+// Component name starts with Caps.
+function Greeting() {
+  return (
+    <div>
+      <h3>hello</h3>
+    </div>
+  )
+}
 
+// How to place the Greeting Component onto index.html.
+// Use ReactDom render --> component,targetElementId
+ReactDom.render(<Greeting/>,document.getElementById('root'))
+ ```
 
-# Getting Started with Create React App
+### Visual Studio plugins
+- Prettier Code Formatter  { Format on paste and save - enabled }  
+    ( Enable - emmet.includeLanguages : {"javascript":"javascriptreact"})  
+
+- ES7React/Redux/GraphQL/React-native-snippets   
+   ( Saves boilerplate )  rafce - 
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
