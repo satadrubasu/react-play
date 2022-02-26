@@ -61,16 +61,22 @@ ReactDom.render(<Greeting/>,document.getElementById('root'))
 ### Nested Components  
 ### CSS Styling  
 ### JSX and Javascript within  
-  - props | props.children
-  - children keyword
-  - enabiling javascript in JSX with {}
+  - props | props.children  
+  - children keyword  
+  - enabiling javascript in JSX with {}  
 
-  - Simple List ( Array of Books ) map() to loop through book list
+  - Simple List ( Array of Books ) map() to loop through book list  
 
-  - Setting up an Event : attribute , eventHandler 
-     note inline avoids the running of handler on render of page
-  - import/exports and managing files
-  - free hosting
+  - Setting up an Event : attribute , eventHandler   
+     note inline avoids the running of handler on render of page  
+  - import/exports and managing files : Path needs to be there  
+     for js inport .js extension not needed  
+     Default export can be imported with anyName in other component  
+
+### Free Hosting
+ - npm run build  
+ - build folder is good to deploy
+ - netlify 
 
 ## Getting Started with Create React App
 
