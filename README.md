@@ -58,7 +58,14 @@ ReactDom.render(<Greeting/>,document.getElementById('root'))
    ( Saves boilerplate )  rafce - 
 
 
-## Nested Components 
+### Nested Components  
+### CSS Styling  
+### JSX and Javascript within  
+  - props | props.children
+  - children keyword
+  - enabiling javascript in JSX with {}
+
+  - Simple List ( Array of Books )
 
 
 
