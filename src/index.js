@@ -14,11 +14,6 @@ import './index.css'
 
 // setup vars
 
-const books = [ {img:'',title:'',author:''},{img:'',title:'',author:''} ]
-const author1 = 'A Doyle'
-const title1 = 'The Memoirs of Sherlock'
-const imgsrc1 = 'https://images-eu.ssl-images-amazon.com/images/I/81u5RjloiES._AC_UL320_SR320,320_.jpg'
-
 // function Greeting() {
 //   return (
 //     <div>
@@ -35,31 +30,50 @@ const imgsrc1 = 'https://images-eu.ssl-images-amazon.com/images/I/81u5RjloiES._A
 // ----------- Active Fragment ---------
 
 // children keyword
+// function BooklList(){
+//   return (
+//     <section className='booklist'>
+//       <Book 
+//           img={imgsrc1}
+//           title= {title1}
+//           author =  {author1}>
+//         <p>Some Children Data</p>
+//       </Book>
+//       <Book img='https://images-eu.ssl-images-amazon.com/images/I/819gepUWtdS._AC_UL320_SR320,320_.jpg'
+//         title='Treasure Island' 
+//         author = 'R Stevenson'/>
+//     </section>      
+//   );
+// }
+const books = [ {id: 1,img:'https://images-eu.ssl-images-amazon.com/images/I/81u5RjloiES._AC_UL320_SR320,320_.jpg',title:'The Memoirs of Sherlock',author:'A Doyle'},
+                {id: 2,img:'https://m.media-amazon.com/images/I/71+n2VSAiXS._AC_UY436_QL65_.jpg',title:'The Time Machine',author:'H. G. Wells'} ]
+// Simple List of Books
+// javascript map() method
 function BooklList(){
   return (
     <section className='booklist'>
-      <Book 
-          img={imgsrc1}
-          title= {title1}
-          author =  {author1}>
-        <p>Some Children Data</p>
-      </Book>
-      <Book img='https://images-eu.ssl-images-amazon.com/images/I/819gepUWtdS._AC_UL320_SR320,320_.jpg'
-        title='Treasure Island' 
-        author = 'R Stevenson'/>
+      { 
+         books.map((theBook) => {
+           const {img,title,author} = theBook;
+           return <Book key={theBook.id} model={theBook}></Book>         
+           }
+        )
+       }
     </section>      
   );
 }
+
 
 // Observe Book parameters and arrow used
 // Observe child property 
 const Book = (props) => {
   console.log(props);
+  const {img,title,author} = props.model;
   return (
     <article className='book'>
-      <img src = {props.img} alt=''/>
-      <h1>{props.title}</h1>
-      <h4>{props.author}</h4>
+      <img src = {img} alt=''/>
+      <h1>{title}</h1>
+      <h4>{author}</h4>
       <h5>{props.children}</h5>
     </article>
   );
