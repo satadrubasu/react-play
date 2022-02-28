@@ -1,8 +1,11 @@
 ## REACT HOOKS ( useState & useEffect )
 
 #### useState
+Keep values between the renders and also trigger re-render  
 
-1. Birthday Reminder
+1. Birthday Reminder 
+ https://react-projects.netlify.app/ 
+ https://github.com/john-smilga/react-projects  
 
 #### useEffect and Conditional Rendering
 
